@@ -1,0 +1,128 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Wrike-inspired color scheme */
+    --background: 0 0% 98%;
+    --foreground: 210 15% 20%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 210 15% 20%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 210 15% 20%;
+
+    /* Primary Green - Wrike signature color */
+    --primary: 150 80% 42%;
+    --primary-foreground: 0 0% 100%;
+
+    /* Secondary - Light green tint */
+    --secondary: 150 40% 95%;
+    --secondary-foreground: 150 70% 30%;
+
+    --muted: 150 20% 96%;
+    --muted-foreground: 150 10% 50%;
+
+    /* Accent Blue - Wrike highlight color */
+    --accent: 200 90% 55%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    /* Warning - Yellow/Amber color */
+    --warning: 38 92% 50%;
+    --warning-foreground: 0 0% 100%;
+
+    --border: 150 15% 90%;
+    --input: 150 15% 90%;
+    --ring: 150 80% 42%;
+
+    --radius: 1rem;
+
+    --sidebar-background: 150 80% 42%;
+    --sidebar-foreground: 0 0% 100%;
+    --sidebar-primary: 0 0% 100%;
+    --sidebar-primary-foreground: 150 80% 42%;
+    --sidebar-accent: 150 80% 35%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 150 80% 48%;
+    --sidebar-ring: 200 90% 55%;
+  }
+
+  .dark {
+    /* Dark mode with green theme */
+    --background: 210 20% 10%;
+    --foreground: 0 0% 95%;
+
+    --card: 210 18% 14%;
+    --card-foreground: 0 0% 95%;
+
+    --popover: 210 18% 14%;
+    --popover-foreground: 0 0% 95%;
+
+    --primary: 150 70% 45%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 150 25% 20%;
+    --secondary-foreground: 0 0% 95%;
+
+    --muted: 150 15% 18%;
+    --muted-foreground: 150 10% 65%;
+
+    --accent: 200 85% 60%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    /* Warning - Yellow/Amber color for dark mode */
+    --warning: 38 92% 55%;
+    --warning-foreground: 0 0% 100%;
+
+    --border: 150 15% 25%;
+    --input: 150 15% 25%;
+    --ring: 150 70% 45%;
+    
+    --sidebar-background: 150 60% 15%;
+    --sidebar-foreground: 0 0% 95%;
+    --sidebar-primary: 0 0% 100%;
+    --sidebar-primary-foreground: 150 60% 15%;
+    --sidebar-accent: 150 55% 20%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 150 40% 20%;
+    --sidebar-ring: 200 85% 60%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-bold tracking-tight;
+  }
+
+  h1 {
+    @apply text-4xl lg:text-5xl;
+  }
+
+  h2 {
+    @apply text-3xl lg:text-4xl;
+  }
+
+  h3 {
+    @apply text-2xl lg:text-3xl;
+  }
+}
